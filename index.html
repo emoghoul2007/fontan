@@ -32,47 +32,11 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
 </script>
 <script defer src="/_vercel/insights/script.js"></script>
 <style>
-    /* --- СТИЛІ ДЛЯ ПРОДАЖУ ФОНТАНУ --- */
+    /* --- БАЗОВІ СТИЛІ (ЧОРНО-ЧЕРВОНА ТЕМА) --- */
     html { scroll-behavior: smooth; }
-
-    body { 
-        font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
-        margin: 0; 
-        padding: 0; 
-        /* Градієнт створює ефект глибини, наче товар стоїть у дорогій студії */
-        background: radial-gradient(circle at center, #1a1a1a 0%, #000000 100%);
-        background-attachment: fixed;
-        color: #e0e0e0; 
-    }
-
-    .container { 
-        max-width: 600px; 
-        margin: 0 auto; 
-        background: #111111; 
-        /* Тінь тепер м'яка, під колір упаковки "Детокс" */
-        box-shadow: 0 10px 40px rgba(150, 0, 24, 0.2); 
-        overflow: hidden; 
-        padding-bottom: 30px;
-        border: 1px solid #222; /* Ледь помітна рамка для чіткості */
-    }
-
-    /* Стиль для заголовка (маркетинговий акцент) */
-    .product-title {
-        background: linear-gradient(to right, #fff, #960018);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        font-weight: bold;
-        text-align: center;
-    }
-
-    img { 
-        max-width: 100%; 
-        width: 100%; 
-        height: auto; 
-        display: block; 
-        /* Легкий ефект дзеркала під фото фонтану */
-        mask-image: linear-gradient(to bottom, black 95%, transparent 100%);
-    }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; background-color: #050505; color: #f0f0f0; }
+    .container { max-width: 600px; margin: 0 auto; background: #111; box-shadow: 0 4px 20px rgba(255, 0, 0, 0.1); overflow: hidden; padding-bottom: 20px;}
+    img { max-width: 100%; width: 100%; height: auto; display: block; border-radius: 5px; }
     
     .top-bar {
         background-color: #000;
