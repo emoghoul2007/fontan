@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Автономний фонтан на сонячній батареї</title>
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '2405027109911372');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=2405027109911372&ev=PageView&noscript=1"/></noscript>
+<script>
+!function (w, d, t) {
+  w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(
+var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script")
+;n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
+  ttq.load('D6VCK5RC77UFQHA2BSLG');
+  ttq.page();
+}(window, document, 'ttq');
+</script>
+    
+<script>
+  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
+<style>
+    /* --- БАЗОВІ СТИЛІ (ЧОРНО-ЧЕРВОНА ТЕМА) --- */
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; background-color: #050505; color: #f0f0f0; }
+    .container { max-width: 600px; margin: 0 auto; background: #111; box-shadow: 0 4px 20px rgba(255, 0, 0, 0.1); overflow: hidden; padding-bottom: 20px;}
+    img { max-width: 100%; width: 100%; height: auto; display: block; border-radius: 5px; }
+    
+    .top-bar {
+        background-color: #000;
+        color: #ff4444;
+        text-align: center;
+        padding: 50px 5px 15px 5px; /* Великий відступ зверху, щоб кнопка не закривала текст */
+        font-size: 22px;
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        position: relative;
+        border-bottom: 2px solid #600000;
+    }
+
+    /* --- КНОПКА ЗВЕРХУ --- */
+    .floating-top-btn { position: fixed; top: 10px; left: 50%; background: #900000; color: #fff; text-decoration: none; padding: 10px 15px; font-weight: 900; font-size: 14px; border-radius: 30px; box-shadow: 0 4px 15px rgba(255, 0, 0, 0.4); z-index: 1001; animation: pulse-center 2s infinite; text-transform: uppercase; border: 2px solid #ff4444; white-space: nowrap;}
+
+    .hero { text-align: center; background: #111; padding-bottom: 0px; margin-top: 0; line-height: 0; }
+    
+    /* --- ЦІНОВИЙ БЛОК --- */
+    .price-block { text-align: center; padding: 20px; background: #1a0505; border-bottom: 2px dashed #900000; }
+    .old-price { font-size: 20px; color: #888; text-decoration: line-through; }
+    .new-price { font-size: 34px; font-weight: 900; color: #ff3333; margin: 10px 0; text-shadow: 0 0 10px rgba(255, 0, 0, 0.3); }
+    .promo-badge { font-size: 18px; font-weight: 900; color: #fff; margin: 15px 0 5px 0; text-transform: uppercase; background: #800000; padding: 10px; border-radius: 8px; border: 2px solid #ff4444; animation: pulse 2s infinite;}
+    
+    /* Таймер */
+    .timer-box { margin-top: 15px; }
+    .timer-title { font-weight: bold; color: #ff6666; margin-bottom: 10px; font-size: 16px;}
+    .timer { display: flex; justify-content: center; gap: 10px; }
+    .time-block { background: #600000; color: #fff; padding: 10px; border-radius: 5px; min-width: 50px; font-size: 20px; font-weight: bold; text-align: center; border: 1px solid #ff4444;}
+    .time-label { display: block; font-size: 12px; font-weight: normal; margin-top: 5px; color: #ccc;}
+
+    /* --- КОМБО-ОФЕРИ --- */
+    .combo-offers { background: #1a0505; border-radius: 12px; margin: 20px 15px; color: white; box-shadow: 0 5px 15px rgba(255, 0, 0, 0.2); overflow: hidden; border: 1px solid #600000;}
+    .combo-title { text-align: center; text-transform: uppercase; font-weight: 900; font-size: 18px; padding: 15px; letter-spacing: 1px; border-bottom: 1px solid #400000; background: #600000;}
+    .combo-row { display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 15px; border-bottom: 1px solid #400000; position: relative; }
+    .combo-row:last-child { border-bottom: none; }
+    .combo-text { font-size: 18px; font-weight: bold; color: #ffcc00; margin-bottom: 5px; text-align: center;}
+    .combo-savings { font-size: 14px; background: #900000; color: white; padding: 4px 10px; border-radius: 4px; font-weight: bold; border: 1px solid #ff4444;}
+    .badge-hit { position: absolute; top: 10px; right: 10px; background: #ff3333; color: #fff; font-size: 12px; font-weight: 900; padding: 3px 8px; border-radius: 20px; text-transform: uppercase; transform: rotate(15deg); box-shadow: 0 2px 5px rgba(0,0,0,0.5);}
+    .badge-mega { position: absolute; top: 10px; right: 10px; background: #ffaa00; color: #000; font-size: 12px; font-weight: 900; padding: 3px 8px; border-radius: 20px; text-transform: uppercase; transform: rotate(15deg); box-shadow: 0 2px 5px rgba(0,0,0,0.5);}
+
+    .content { padding: 15px; }
+    .section-title { text-align: center; color: #ff4444; border-bottom: 2px solid #900000; padding-bottom: 10px; margin-top: 25px; margin-bottom: 15px; font-weight: 900; text-transform: uppercase;}
+    
+    .marketing-text { font-size: 16px; line-height: 1.6; text-align: justify; padding: 15px; background: #1a1a1a; border-left: 4px solid #900000; border-radius: 4px; margin-bottom: 15px; font-weight: 500; color: #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.5);}
+    .marketing-text.highlight { background: #2a0a0a; border-left-color: #ff3333; text-align: center; font-weight: bold; }
+
+    /* Таблиця характеристик */
+    .specs-table { width: 100%; border-collapse: collapse; margin: 20px 0; font-family: inherit; font-size: 14px; background: #151515; }
+    .specs-table tr:nth-child(even) { background-color: #1a1a1a; }
+    .specs-table td { padding: 12px 15px; border: 1px solid #333; color: #ccc;}
+    .specs-table td:first-child { font-weight: bold; color: #ff6666; width: 45%; }
+
+    /* Відгуки */
+    .swipe-hint { text-align: center; font-size: 14px; color: #888; margin-bottom: 10px; font-style: italic; font-weight: bold;}
+    .reviews-carousel { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 15px; padding-bottom: 15px; scrollbar-width: none; }
+    .reviews-carousel::-webkit-scrollbar { display: none; }
+    .review-card { min-width: 85%; scroll-snap-align: center; background: #1a1a1a; padding: 10px; border-radius: 8px; border: 1px solid #400000; border-top: 4px solid #900000;}
+    
+    /* FAQ */
+    details { background: #151515; border: 1px solid #333; border-radius: 6px; margin-bottom: 10px; padding: 12px; cursor: pointer; transition: 0.3s; }
+    details[open] { border-left: 4px solid #900000; background: #1a0a0a; border-color: #600000;}
+    summary { font-weight: bold; font-size: 16px; color: #ff6666; outline: none; list-style: none; display: flex; justify-content: space-between; align-items: center;}
+    summary::-webkit-details-marker { display: none; }
+    summary::after { content: '▼'; font-size: 12px; color: #ff4444; transition: 0.3s; }
+    details[open] summary::after { transform: rotate(180deg); }
+    details p { margin-top: 10px; font-size: 15px; color: #bbb; line-height: 1.5; padding-top: 10px; border-top: 1px dashed #444; }
+
+    /* Форма */
+    .order-form { background: #1a0505; padding: 20px; border-radius: 8px; margin-top: 20px; margin-bottom: 20px; border: 2px solid #900000; box-shadow: 0 5px 20px rgba(255, 0, 0, 0.15);}
+    .order-form h2 { text-align: center; margin-top: 0; margin-bottom: 15px; color: #ff4444; font-size: 24px; text-transform: uppercase;}
+    .form-group { margin-bottom: 15px; }
+    .form-group label { display: block; margin-bottom: 5px; font-weight: bold; font-size: 14px; color: #ccc;}
+    .form-group input, .form-group select { width: 100%; padding: 12px; border: 1px solid #555; border-radius: 5px; box-sizing: border-box; font-size: 16px; background: #222; color: #fff; }
+    .form-group select { font-weight: bold; color: #ff6666; border: 2px solid #900000; cursor: pointer; }
+    .form-group input:focus, .form-group select:focus { outline: none; border-color: #ff3333; }
+    .submit-btn { background-color: #a00000; color: white; border: 2px solid #ff4444; padding: 18px; width: 100%; font-size: 22px; font-weight: 900; border-radius: 5px; cursor: pointer; transition: 0.3s; animation: pulse 2s infinite; text-transform: uppercase;}
+    .stock-left-badge { text-align: center; margin-top: 15px; font-weight: 900; color: #ff4444; }
+
+    /* Випливаючі сповіщення */
+    .fake-notify { position: fixed; bottom: -100px; left: 50%; transform: translateX(-50%); background: rgba(20, 20, 20, 0.95); border-left: 5px solid #900000; box-shadow: 0 4px 15px rgba(255,0,0,0.3); padding: 12px 15px; border-radius: 8px; z-index: 9999; transition: bottom 0.5s ease-in-out; display: flex; align-items: center; gap: 10px; width: max-content; max-width: 90%; border: 1px solid #333;}
+    .fake-notify.show { bottom: 20px; }
+    .fake-notify img { width: 40px; height: 40px; border-radius: 50%; border: 1px solid #555;}
+    .fake-text { font-size: 13px; line-height: 1.4; color: #eee;}
+    .fake-text strong { color: #ff4444; font-size: 14px;}
+
+    /* Футер */
+    .footer-info { text-align: center; padding: 20px; font-size: 14px; color: #888; background: #0a0a0a; border-top: 1px dashed #333; margin-top: 10px;}
+    .footer-info p { margin: 8px 0; font-size: 15px;}
+    .footer-info a { color: #ff6666; text-decoration: none; font-weight: bold; }
+    .footer-links { margin: 20px 0; display: flex; flex-direction: column; gap: 10px; }
+    .footer-links a { color: #666; text-decoration: underline; font-size: 13px; font-weight: normal; }
+    .copyright { margin-top: 20px; font-size: 12px; color: #555; font-weight: bold;}
+
+    @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.03); }
+        100% { transform: scale(1); }
+    }
+    @keyframes pulse-center {
+        0% { transform: translateX(-50%) scale(1); }
+        50% { transform: translateX(-50%) scale(1.05); }
+        100% { transform: translateX(-50%) scale(1); }
+    }
+
+   /* Повідомлення про успішне замовлення */
+    .success-message {
+        display: none;
+        text-align: center;
+        background: #1a2a1a;
+        color: #4ade80;
+        padding: 30px 20px;
+        border-radius: 8px;
+        border: 2px solid #22c55e;
+        margin-top: 10px;
+    }
+    .success-message h3 { margin-top: 0; font-size: 24px; color: #22c55e; margin-bottom: 15px; }
+    .success-message p { font-size: 18px; font-weight: 600; margin: 0; line-height: 1.5; color: #ddd;} 
+</style>
+</head>
+<body>
+    <a href="#order" class="floating-top-btn">Замовити зі знижкою 🛒</a>
+
+    <div class="container">
+        <div class="top-bar">
+            Фонтан для саду на сонячних батареях
+        </div>
+        
+        <div class="hero">
+            <img src="main-product.jpg" alt="Фонтан на сонячній батареї">
+        </div>
+
+        <div class="price-block">
+            <div class="old-price">Звичайна ціна: 960 грн</div>
+            <div class="new-price">Ціна по акції: 680 грн</div>
+            <div class="promo-badge">🎁 залишилося 15 штук по акції 🎁</div>
+            
+            <div class="timer-box">
+                <div class="timer-title">⏳ До кінця пропозиції:</div>
+                <div class="timer">
+                    <div class="time-block"><span id="hours">02</span><span class="time-label">Годин</span></div>
+                    <div class="time-block">:<span class="time-label">&nbsp;</span></div>
+                    <div class="time-block"><span id="minutes">21</span><span class="time-label">Хвилин</span></div>
+                    <div class="time-block">:<span class="time-label">&nbsp;</span></div>
+                    <div class="time-block"><span id="seconds">30</span><span class="time-label">Секунд</span></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="combo-offers">
+            <div class="combo-title">ЗАОЩАДЖУЙ ПРЯМО ЗАРАЗ!</div>
+            <div class="combo-row">
+                <div class="badge-hit">🔥 ХІТ</div>
+                <div class="combo-text">КУПУЄТЕ 2 шт. = ЗНИЖКА 10%</div>
+                <div class="combo-savings">Разом: 1224 грн (замість 1360 грн)</div>
+            </div>
+            <div class="combo-row">
+                <div class="badge-mega">⚡ МЕГА</div>
+                <div class="combo-text">КУПУЄТЕ 3 шт. = ЗНИЖКА 15%</div>
+                <div class="combo-savings">Разом: 1734 грн (замість 2040 грн)</div>
+            </div>
+            <div class="combo-row">
+                <div class="combo-text">КУПУЄТЕ 4 шт. = ЗНИЖКА 20%</div>
+                <div class="combo-savings">Разом: 2176 грн (замість 2720 грн)</div>
+            </div>
+        </div>
+
+        <div class="content">
+            
+            <h2 class="section-title">Магія води у вашому дворі</h2>
+            <div class="marketing-text">
+                Отримайте розслаблюючий фонтан для вашого саду, балкона або тераси миттєво! Наш інноваційний пристрій <strong>не потребує жодних дротів, розеток чи батарейок.</strong> <br><br>
+                Просто покладіть його на воду, і щойно сонячне світло торкнеться надчутливої панелі, він автоматично запуститься за лічені секунди. Динамічна краса води миттєво привабить птахів, метеликів та бабок, вдихнувши у ваш сад неймовірну життєву силу!
+            </div>
+
+            <img src="gifdiesasib.gif" alt="Робота фонтану" style="margin-bottom: 15px;">
+            
+            <div class="marketing-text highlight">
+                <span style="font-size: 18px; color: #ff3333;">🔥 Світлове шоу, яке заворожує!</span><br><br>
+                Вдень він насичує воду киснем та створює прохолоду, а вночі перетворюється на справжнє магічне видовище! Вбудована система накопичення енергії дозволяє фонтану <strong>яскраво світитися в темряві</strong>, створюючи романтичну атмосферу у вашому басейні, ставку або навіть звичайній чаші з водою.
+            </div>
+
+            <img src="gifdiesasib1.gif" alt="Підсвітка фонтану" style="margin-bottom: 15px;">
+
+            <div class="marketing-text">
+                <strong>Автономність, що вражає!</strong> Завдяки інноваційній нано-батареї нового покоління, наш фонтан здатен працювати нон-стоп. Він накопичує енергію навіть у похмуру погоду, гарантуючи <strong>до 48 годин автономної роботи</strong> на одному заряді! У комплекті йдуть змінні форсунки, які дозволяють створювати найрізноманітніші форми струменя — від легкого розпилення до високого гейзера.
+            </div>
+
+            <img src="gifdiesasib2.gif" alt="Форсунки та струмінь" style="margin-bottom: 25px;">
+
+            <h2 class="section-title">Технічні характеристики</h2>
+            <table class="specs-table">
+                <tr><td>Джерело живлення</td><td>Ультрачутлива сонячна панель + Нано-АКБ</td></tr>
+                <tr><td>Час автономної роботи</td><td>До 48 годин на одному заряді</td></tr>
+                <tr><td>Висота струменя</td><td>Регульована (від 30 см до 1.5 метра)</td></tr>
+                <tr><td>Підсвітка</td><td>Інтелектуальна (вмикається вночі)</td></tr>
+                <tr><td>Форсунки</td><td>4 змінні насадки для різних ефектів</td></tr>
+                <tr><td>Матеріал</td><td>Ударостійкий еко-АБС пластик</td></tr>
+                <tr><td>Призначення</td><td>Басейни, ставки, пташині ванни, сад</td></tr>
+            </table>
+
+            <h2 class="section-title">Часті питання</h2>
+            <details>
+                <summary>Чи потрібно підключати фонтан до розетки?</summary>
+                <p>Абсолютно ні! Фонтан працює виключно від сонячної енергії. Це 100% екологічно та заощаджує ваші гроші на електроенергії.</p>
+            </details>
+            <details>
+                <summary>Чи працює він у похмуру погоду або вночі?</summary>
+                <p>Так! Завдяки потужній вбудованій батареї нового покоління, фонтан накопичує заряд вдень і продовжує працювати (та світитися) навіть після заходу сонця до 48 годин.</p>
+            </details>
+            <details>
+                <summary>Як його встановити?</summary>
+                <p>Установка займає рівно 3 секунди. Просто опустіть фонтан на поверхню води, і він одразу почне працювати.</p>
+            </details>
+            <details>
+                <summary>Чи безпечний він для риб та птахів?</summary>
+                <p>Він не просто безпечний, він корисний! Фонтан рециркулює воду, насичуючи її киснем, що ідеально підходить для акваріумів, ставків з рибками та ванночок для птахів.</p>
+            </details>
+            <details>
+                <summary>Як працює знижка при покупці кількох штук?</summary>
+                <p>Якщо ви замовляєте 2 фонтани (наприклад, собі і на подарунок), ви отримуєте знижку 10% на все замовлення. При покупці 3-х — знижка 15%, а 4-х — аж 20%!</p>
+            </details>
+
+            <h2 class="section-title">Відгуки покупців</h2>
+            <div class="swipe-hint">👈 Гортайте відгуки вбік 👉</div>
+            <div class="reviews-carousel">
+                <div class="review-card"><img src="otzivodin.jpg" alt="Відгук 1"></div>
+                <div class="review-card"><img src="otzivdva.jpg" alt="Відгук 2"></div>
+                <div class="review-card"><img src="otzivtri.jpg" alt="Відгук 3"></div>
+            </div>
+
+            <img src="product.jpg" alt="Фонтан" style="margin-top: 20px;">
+
+            <div class="order-form" id="order">
+                <h2 id="formTitle">Оформлення замовлення</h2>
+                
+                <form id="tgForm" onsubmit="sendToTelegram(event)">
+                    <div class="form-group">
+                        <label for="quantity">Оберіть варіант замовлення:</label>
+                        <select id="quantity" name="quantity" required>
+                            <option value="1 шт">1 шт - 680 грн</option>
+                            <option value="2 шт - Знижка 10%" selected>🔥 ХІТ: 2 шт (Знижка 10%) - 1224 грн</option>
+                            <option value="3 шт - Знижка 15%">⚡ МЕГА: 3 шт (Знижка 15%) - 1734 грн</option>
+                            <option value="4 шт - Знижка 20%">🎁 4 шт (Знижка 20%) - 2176 грн</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Ваше ПІБ:</label>
+                        <input type="text" id="name" name="name" placeholder="Введіть Ваше ім'я" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Номер телефону:</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Введіть Ваш номер телефону" required>
+                    </div>
+                    <button type="submit" class="submit-btn" id="submitBtn">ОФОРМИТИ ЗАМОВЛЕННЯ</button>
+                    <div class="stock-left-badge">🎁 залишилося 15 штук по акції 🎁</div>
+                </form>
+
+                <div id="successMessage" class="success-message">
+                    <h3>✅ Дякуємо за замовлення!</h3>
+                    <p>Ваша заявка успішно прийнята.<br>Очікуйте 10-15 хв. дзвінка менеджера для підтвердження.</p>
+                </div>
+            </div>
+            
+            <img src="dostavkainfo.jpg" alt="Інформація про доставку" style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.5); border-radius: 8px; border: 1px solid #333;">
+
+            <div class="footer-info">
+                <p>📞 Телефон: <a href="tel:+380975341288">+38 (097) 534-12-88</a></p>
+                <p>📧 Email: <a href="mailto:support@cleaner-store.com.ua">support@cleaner-store.com.ua</a></p>
+                <p>📍 Адреса: Україна, вулиця Володимира Великого 41, м.Дніпро, Дніпропетровська обл.</p>
+                
+                <div class="footer-links">
+                    <a href="https://rustof.bravix.uno/conditions.html" target="_blank">Умови гарантії та повернення</a>
+                    <a href="https://rustof.bravix.uno/usersagitment.html" target="_blank">Угода користувача</a>
+                    <a href="https://rustof.bravix.uno/oferta.html" target="_blank">Договір оферти</a>
+                    <a href="https://rustof.bravix.uno/politics.html" target="_blank">Політика конфіденційності</a>
+                </div>
+                
+                <p class="copyright">© 2026 Всі права захищені.</p>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="fakeNotify" class="fake-notify">
+        <img src="main-product.jpg" alt="Фонтан">
+        <div class="fake-text">
+            <strong id="notifyName">Діма (Житомир)</strong><br>
+            щойно замовив(ла) <span id="notifyQty">1 шт</span>
+        </div>
+    </div>
+
+    <script>
+        // --- ТАЙМЕР ---
+        function startTimer() {
+            let time = 2 * 3600 + 21 * 60 + 30; 
+            setInterval(function() {
+                if (time <= 0) time = 2 * 3600 + 21 * 60 + 30; 
+                time--;
+                let h = Math.floor(time / 3600);
+                let m = Math.floor((time % 3600) / 60);
+                let s = time % 60;
+                document.getElementById('hours').innerText = h < 10 ? '0' + h : h;
+                document.getElementById('minutes').innerText = m < 10 ? '0' + m : m;
+                document.getElementById('seconds').innerText = s < 10 ? '0' + s : s;
+            }, 1000);
+        }
+        startTimer();
+
+        // --- ІМІТАЦІЯ ЗАМОВЛЕНЬ ---
+        const buyers = [
+            { name: "Діма (Житомир)", qty: "2 шт - Знижка 10%" },
+            { name: "Олена (Київ)", qty: "1 шт" },
+            { name: "Марія (Одеса)", qty: "3 шт - Знижка 15%" },
+            { name: "Олександр (Львів)", qty: "2 шт - Знижка 10%" },
+            { name: "Ірина (Дніпро)", qty: "4 шт - Знижка 20%" }
+        ];
+
+        function showNotification() {
+            const notifyBox = document.getElementById('fakeNotify');
+            const randomBuyer = buyers[Math.floor(Math.random() * buyers.length)];
+            
+            document.getElementById('notifyName').innerText = randomBuyer.name;
+            document.getElementById('notifyQty').innerText = randomBuyer.qty;
+            
+            notifyBox.classList.add('show');
+            
+            setTimeout(() => {
+                notifyBox.classList.remove('show');
+            }, 3000);
+
+            let nextTime = Math.floor(Math.random() * (12000 - 6000 + 1)) + 6000;
+            setTimeout(showNotification, nextTime);
+        }
+        
+        setTimeout(showNotification, 4000);
+
+        // --- ВІДПРАВКА В ТГ ТА GOOGLE SHEETS ---
+        function sendToTelegram(event) {
+            event.preventDefault();
+            const qty = document.getElementById('quantity').value; 
+            const name = document.getElementById('name').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+
+            if (name.length < 2 || /^[\.\d]+$/.test(name)) {
+                alert("❌ Будь ласка, введіть справжнє ім'я."); return;
+            }
+            const phoneDigits = phone.replace(/\D/g, '');
+            if (phoneDigits.length < 9) {
+                alert("❌ Будь ласка, введіть коректний номер телефону."); return;
+            }
+
+            const submitBtn = document.getElementById('submitBtn');
+            submitBtn.textContent = 'ВІДПРАВКА...';
+            submitBtn.disabled = true;
+
+            // 1. Формируем данные для Telegram
+            const BOT_TOKEN = '8741175626:AAHlZneEOfIbidnmdGE_z_u6Z834wwwTTYo';
+            const CHAT_ID = '-1003835862302';
+            const textMessage = `🔥 НОВЕ ЗАМОВЛЕННЯ\n\n📦 Товар: Сонячний Фонтан\n🛒 Варіант: ${qty}\n👤 ПІБ: ${name}\n📞 Телефон: ${phone}`;
+            const tgUrl = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage?chat_id=${CHAT_ID}&text=${encodeURIComponent(textMessage)}`;
+
+            // 2. Формируем данные для Google Таблицы
+            const googleSheetUrl = 'https://script.google.com/macros/s/AKfycbxFdvMBUE-zwCXaZ38CrQAc4DlxPBs000_ZixvDfLNvSlLm-zGWuZZ-GQDBJn2YSutJuQ/exec';
+            const sheetData = {
+                "name": name,
+                "phone": phone,
+                "variant": qty,
+                "total": (function(q) {
+                    if (q.includes('1 шт')) return 680;
+                    if (q.includes('2 шт')) return 1224;
+                    if (q.includes('3 шт')) return 1734;
+                    if (q.includes('4 шт')) return 2176;
+                    return 0;
+                })(qty)
+            };
+
+            console.log("Відправляємо в Таблицю:", sheetData);
+
+            // 3. Отправляем ПАРАЛЛЕЛЬНО оба запроса
+            const sendTG = fetch(tgUrl);
+            const sendSheet = fetch(googleSheetUrl, {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(sheetData)
+            });
+
+            Promise.all([sendTG, sendSheet])
+                .then(responses => {
+                    if (responses[0].ok) {
+                        document.getElementById('tgForm').style.display = 'none';
+                        document.getElementById('formTitle').style.display = 'none';
+                        document.getElementById('successMessage').style.display = 'block';
+                    } else {
+                        alert('Помилка відправки в Telegram. Спробуйте ще раз.');
+                    }
+                })
+                .catch(error => {
+                    console.error("Помилка:", error);
+                    alert('Виникла помилка при відправці. Перевірте з\'єднання.');
+                })
+                .finally(() => {
+                    submitBtn.textContent = 'ОФОРМИТИ ЗАМОВЛЕННЯ';
+                    submitBtn.disabled = false;
+                });
+        }
+    </script>
+</body>
+</html>
